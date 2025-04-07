@@ -114,6 +114,15 @@ document.querySelectorAll('.js-add-to-cart')
                 
             });
         }//when button is clicked,product name will be out then add it to the cart
-        console.log(cart);
+        
+        let cartQuantity = 0;
+
+        cart.forEach((item) => {
+            cartQuantity += item.quantity;
+        });
+        
+        document.querySelector('.js-cart-quantity')
+        .innerHTML = cartQuantity;
+
     });
  });
